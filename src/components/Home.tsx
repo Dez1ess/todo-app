@@ -45,7 +45,7 @@ export default function Home() {
 
   const fetchUserTasks = async () => {
     try {
-      const taskResponse = await axios.get(`http://localhost:3000/user/tasks/${userinfo.userId}`);
+      const taskResponse = await axios.get(`https://todo-app-api-production-f55a.up.railway.app/user/tasks/${userinfo.userId}`);
       setUserTasks(taskResponse.data);
     } catch (error) {
       console.error("Error fetching user tasks:", error);
@@ -54,7 +54,7 @@ export default function Home() {
 
   const fetchUserData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/auth/user", {
+      const response = await axios.get("https://todo-app-api-production-f55a.up.railway.app/auth/user", {
         withCredentials: true,
       });
       setUserInfo(response.data);
@@ -132,7 +132,7 @@ export default function Home() {
     e.preventDefault();
 
     try {
-      await axios.post('http://localhost:3000/auth/logout');
+      await axios.post('https://todo-app-api-production-f55a.up.railway.app/auth/logout');
       navigate('/auth/login'); 
 
     } catch(error) {
