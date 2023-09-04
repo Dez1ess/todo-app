@@ -1,0 +1,56 @@
+.task-input {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  overflow: hidden;
+
+  .input-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    background-color: transparent; 
+    font-size: 1.5rem;
+    outline: none; 
+    transition: all .2s ease;
+    
+    &:focus {
+      font-size: 1.7rem;
+    }
+  }
+
+  .add-task {
+    position: relative;
+    top: -2px;
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 0 1rem 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #000;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  .task-input {
+    input {
+      font-size: 1.7rem;
+      
+      &:focus {
+        font-size: 2rem;
+      }
+    }
+  
+  }
+}
