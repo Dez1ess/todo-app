@@ -27,7 +27,7 @@ type CompleteTaskPayload = {
 export const addTaskAsync = createAsyncThunk(
   'tasks/addTask',
   async (payload: AddTaskPayload) => {
-    const response = await axios.post("https://todo-app-api-production-f55a.up.railway.app/user/tasks", {
+    const response = await axios.post("https://dave-todo-app-api.onrender.com/user/tasks", {
       id: payload.id, 
       title: payload.title,
       userId: payload.userId,
@@ -39,7 +39,7 @@ export const addTaskAsync = createAsyncThunk(
 export const removeTaskAsync = createAsyncThunk(
   'tasks/removeTask',
   async (payload: RemoveTaskPayload) => {
-    await axios.delete(`https://todo-app-api-production-f55a.up.railway.app/user/tasks/${payload.userId}/${payload.id}`);
+    await axios.delete(`https://dave-todo-app-api.onrender.com/user/tasks/${payload.userId}/${payload.id}`);
     return payload.id;
   }
 );
@@ -47,7 +47,7 @@ export const removeTaskAsync = createAsyncThunk(
 export const completeTaskAsync = createAsyncThunk(
   'tasks/completeTask',
   async (payload: CompleteTaskPayload) => {
-    await axios.put(`https://todo-app-api-production-f55a.up.railway.app/user/tasks/${payload.userId}/${payload.id}`);
+    await axios.put(`https://dave-todo-app-api.onrender.com/user/tasks/${payload.userId}/${payload.id}`);
     return payload.id;
   }
 );
