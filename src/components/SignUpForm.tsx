@@ -76,7 +76,7 @@ export default function SignUpForm() {
     data.country = country;
 
     try {
-      await axios.post("https://todo-app-pied-nine.vercel.app/auth/register", data);
+      await axios.post("todo-app-api-chi.vercel.app/auth/register", data);
       console.log("User registered successfully");
 
       setShowSuccessMessage(true);

@@ -35,7 +35,7 @@ export default function LogInForm() {
     try {
       data.rememberMe = rememberMe;
 
-      await axios.post("https://todo-app-pied-nine.vercel.app/auth/login", data);
+      await axios.post("todo-app-api-chi.vercel.app/auth/login", data);
       console.log("User logged in successfully");
 
       setShowSuccessMessage(true);
