@@ -76,7 +76,7 @@ export default function SignUpForm() {
     data.country = country;
 
     try {
-      await axios.post("https://dave-todo-app-api.onrender.com/auth/register", data);
+      await axios.post("https://todo-app-pied-nine.vercel.app/auth/register", data);
       console.log("User registered successfully");
 
       setShowSuccessMessage(true);
